@@ -6,9 +6,7 @@
       "10:45 AM",
       "11:45 AM",
       "3:00 PM",
-      "5:00 PM",
-      "7:00 AM",
-      "8:15 AM"
+      "5:00 PM"
     ],
     "imagePath": "../assets/fillerImage.png",
     "morningPricePerNineCart": "$28",
@@ -31,9 +29,7 @@
       "11:15 AM",
       "11:30 AM",
       "12:00 PM",
-      "1:45 PM",
-      "7:45 AM",
-      "9:30 AM"
+      "1:45 PM"
     ],
     "imagePath": "../assets/fillerImage.png",
     "morningPricePerNineCart": "$24",
@@ -55,10 +51,7 @@
     "availableTeeTimes": [
       "10:45 AM",
       "3:45 PM",
-      "4:30 PM",
-      "8:15 AM",
-      "8:45 AM",
-      "9:45 AM"
+      "4:30 PM"
     ],
     "imagePath": "../assets/fillerImage.png",
     "morningPricePerNineCart": "$20",
@@ -82,8 +75,7 @@
       "12:30 PM",
       "3:00 PM",
       "4:45 PM",
-      "5:30 PM",
-      "6:30 AM"
+      "5:30 PM"
     ],
     "imagePath": "../assets/fillerImage.png",
     "morningPricePerNineCart": "$40",
@@ -105,10 +97,7 @@
     "availableTeeTimes": [
       "11:00 AM",
       "1:00 PM",
-      "3:15 PM",
-      "7:30 AM",
-      "8:15 AM",
-      "9:00 AM"
+      "3:15 PM"
     ],
     "imagePath": "../assets/fillerImage.png",
     "morningPricePerNineCart": "$22",
@@ -131,9 +120,7 @@
       "12:45 PM",
       "2:00 PM",
       "2:30 PM",
-      "3:45 PM",
-      "7:30 AM",
-      "8:00 AM"
+      "3:45 PM"
     ],
     "imagePath": "../assets/fillerImage.png",
     "morningPricePerNineCart": "$32",
@@ -157,8 +144,7 @@
       "12:00 PM",
       "1:00 PM",
       "2:00 PM",
-      "5:00 PM",
-      "8:45 AM"
+      "5:00 PM"
     ],
     "imagePath": "../assets/fillerImage.png",
     "morningPricePerNineCart": "$30",
@@ -180,10 +166,7 @@
     "availableTeeTimes": [
       "12:15 PM",
       "12:45 PM",
-      "4:30 PM",
-      "6:15 AM",
-      "9:15 AM",
-      "9:30 AM"
+      "4:30 PM"
     ],
     "imagePath": "../assets/fillerImage.png",
     "morningPricePerNineCart": "$24",
@@ -205,10 +188,7 @@
     "availableTeeTimes": [
       "3:30 PM",
       "4:30 PM",
-      "4:45 PM",
-      "6:45 AM",
-      "8:15 AM",
-      "9:45 AM"
+      "4:45 PM"
     ],
     "imagePath": "../assets/fillerImage.png",
     "morningPricePerNineCart": "$30",
@@ -229,11 +209,7 @@
     "numHoles": "18",
     "availableTeeTimes": [
       "3:00 PM",
-      "4:30 PM",
-      "6:15 AM",
-      "6:30 AM",
-      "7:00 AM",
-      "7:45 AM"
+      "4:30 PM"
     ],
     "imagePath": "../assets/fillerImage.png",
     "morningPricePerNineCart": "$28",
@@ -255,10 +231,7 @@
     "availableTeeTimes": [
       "11:15 AM",
       "12:45 PM",
-      "3:30 PM",
-      "7:30 AM",
-      "8:00 AM",
-      "9:00 AM"
+      "3:30 PM"
     ],
     "imagePath": "../assets/fillerImage.png",
     "morningPricePerNineCart": "$30",
@@ -281,9 +254,7 @@
       "3:00 PM",
       "4:00 PM",
       "4:15 PM",
-      "5:15 PM",
-      "8:15 AM",
-      "9:00 AM"
+      "5:15 PM"
     ],
     "imagePath": "../assets/fillerImage.png",
     "morningPricePerNineCart": "$28",
@@ -307,8 +278,7 @@
       "2:15 PM",
       "2:45 PM",
       "4:30 PM",
-      "5:15 PM",
-      "6:15 AM"
+      "5:15 PM"
     ],
     "imagePath": "../assets/fillerImage.png",
     "morningPricePerNineCart": "$30",
@@ -331,9 +301,7 @@
       "10:00 AM",
       "10:15 AM",
       "10:30 AM",
-      "11:15 AM",
-      "9:15 AM",
-      "9:30 AM"
+      "11:15 AM"
     ],
     "imagePath": "../assets/fillerImage.png",
     "morningPricePerNineCart": "$30",
@@ -357,8 +325,7 @@
       "1:00 PM",
       "3:30 PM",
       "4:30 PM",
-      "4:45 PM",
-      "9:45 AM"
+      "4:45 PM"
     ],
     "imagePath": "../assets/fillerImage.png",
     "morningPricePerNineCart": "$32",
@@ -379,11 +346,7 @@
     "numHoles": "18",
     "availableTeeTimes": [
       "10:30 AM",
-      "1:45 PM",
-      "7:00 AM",
-      "7:15 AM",
-      "8:30 AM",
-      "9:00 AM"
+      "1:45 PM"
     ],
     "imagePath": "../assets/fillerImage.png",
     "morningPricePerNineCart": "$28",

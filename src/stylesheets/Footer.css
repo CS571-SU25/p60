@@ -1,0 +1,18 @@
+footer
+{
+    background-color: #6E9A4D;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed; /* sticks it to bottom */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+footer p
+{
+    margin: 0;
+    font-size: 14px;
+}

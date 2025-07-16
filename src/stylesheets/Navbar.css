@@ -1,0 +1,25 @@
+nav
+{
+    position: fixed; /* make it stick to the top */
+    top: 0; /* align to top of viewport */
+    left: 0; /* align to left edge */
+    width: 100%; /* make it full width */
+    background-color: #6E9A4D;
+    color: white;
+    padding: 10px;
+    z-index: 1000; /* keep it above other elements */
+}
+
+nav ul
+{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav li
+{
+    cursor: pointer;
+}
