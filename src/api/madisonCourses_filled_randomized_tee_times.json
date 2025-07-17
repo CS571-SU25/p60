@@ -8,7 +8,7 @@
       "3:00 PM",
       "5:00 PM"
     ],
-    "imagePath": "../assets/fillerImage.png",
+    "imagePath": "/Users/alexshpakov/_projects/_personal/p60/src/assets/odanaHills.jpg",
     "morningPricePerNineCart": "$28",
     "afternoonPricePerNineCart": "$25",
     "twilightPricePerNineCart": "$22",
@@ -31,7 +31,7 @@
       "12:00 PM",
       "1:45 PM"
     ],
-    "imagePath": "../assets/fillerImage.png",
+    "imagePath": "/Users/alexshpakov/_projects/_personal/p60/src/assets/theGlen.jpg",
     "morningPricePerNineCart": "$24",
     "afternoonPricePerNineCart": "$21",
     "twilightPricePerNineCart": "$18",
@@ -53,7 +53,7 @@
       "3:45 PM",
       "4:30 PM"
     ],
-    "imagePath": "../assets/fillerImage.png",
+    "imagePath": "/Users/alexshpakov/_projects/_personal/p60/src/assets/nineSprings.jpg",
     "morningPricePerNineCart": "$20",
     "afternoonPricePerNineCart": "$18",
     "twilightPricePerNineCart": "$15",
@@ -77,7 +77,7 @@
       "4:45 PM",
       "5:30 PM"
     ],
-    "imagePath": "../assets/fillerImage.png",
+    "imagePath": "/Users/alexshpakov/_projects/_personal/p60/src/assets/uRidge.jpg",
     "morningPricePerNineCart": "$40",
     "afternoonPricePerNineCart": "$36",
     "twilightPricePerNineCart": "$30",
@@ -99,7 +99,7 @@
       "1:00 PM",
       "3:15 PM"
     ],
-    "imagePath": "../assets/fillerImage.png",
+    "imagePath": "/Users/alexshpakov/_projects/_personal/p60/src/assets/pioneerPointe.jpg",
     "morningPricePerNineCart": "$22",
     "afternoonPricePerNineCart": "$20",
     "twilightPricePerNineCart": "$17",
@@ -122,7 +122,7 @@
       "2:30 PM",
       "3:45 PM"
     ],
-    "imagePath": "../assets/fillerImage.png",
+    "imagePath": "/Users/alexshpakov/_projects/_personal/p60/src/assets/pleasantView.jpg",
     "morningPricePerNineCart": "$32",
     "afternoonPricePerNineCart": "$28",
     "twilightPricePerNineCart": "$24",
@@ -146,7 +146,7 @@
       "2:00 PM",
       "5:00 PM"
     ],
-    "imagePath": "../assets/fillerImage.png",
+    "imagePath": "/Users/alexshpakov/_projects/_personal/p60/src/assets/door creek.jpg",
     "morningPricePerNineCart": "$30",
     "afternoonPricePerNineCart": "$26",
     "twilightPricePerNineCart": "$22",
@@ -168,7 +168,7 @@
       "12:45 PM",
       "4:30 PM"
     ],
-    "imagePath": "../assets/fillerImage.png",
+    "imagePath": "/Users/alexshpakov/_projects/_personal/p60/src/assets/monona.jpg",
     "morningPricePerNineCart": "$24",
     "afternoonPricePerNineCart": "$21",
     "twilightPricePerNineCart": "$18",
@@ -190,7 +190,7 @@
       "4:30 PM",
       "4:45 PM"
     ],
-    "imagePath": "../assets/fillerImage.png",
+    "imagePath": "/Users/alexshpakov/_projects/_personal/p60/src/assets/yahara.webp",
     "morningPricePerNineCart": "$30",
     "afternoonPricePerNineCart": "$26",
     "twilightPricePerNineCart": "$22",
@@ -211,7 +211,7 @@
       "3:00 PM",
       "4:30 PM"
     ],
-    "imagePath": "../assets/fillerImage.png",
+    "imagePath": "/Users/alexshpakov/_projects/_personal/p60/src/assets/door creek.jpg",
     "morningPricePerNineCart": "$28",
     "afternoonPricePerNineCart": "$25",
     "twilightPricePerNineCart": "$22",
@@ -233,7 +233,7 @@
       "12:45 PM",
       "3:30 PM"
     ],
-    "imagePath": "../assets/fillerImage.png",
+    "imagePath": "/Users/alexshpakov/_projects/_personal/p60/src/assets/theOaks.png",
     "morningPricePerNineCart": "$30",
     "afternoonPricePerNineCart": "$26",
     "twilightPricePerNineCart": "$22",
@@ -248,7 +248,7 @@
     "zipCode": "53527"
   },
   {
-    "courseName": "Praire Pines Golf Club",
+    "courseName": "Prairie Pines Golf Club",
     "numHoles": "18",
     "availableTeeTimes": [
       "3:00 PM",
@@ -256,7 +256,7 @@
       "4:15 PM",
       "5:15 PM"
     ],
-    "imagePath": "../assets/fillerImage.png",
+    "imagePath": "/Users/alexshpakov/_projects/_personal/p60/src/assets/prairiePines.jpg",
     "morningPricePerNineCart": "$28",
     "afternoonPricePerNineCart": "$25",
     "twilightPricePerNineCart": "$21",
@@ -280,7 +280,7 @@
       "4:30 PM",
       "5:15 PM"
     ],
-    "imagePath": "../assets/fillerImage.png",
+    "imagePath": "/Users/alexshpakov/_projects/_personal/p60/src/assets/harvestHill.webp",
     "morningPricePerNineCart": "$30",
     "afternoonPricePerNineCart": "$26",
     "twilightPricePerNineCart": "$22",
@@ -303,7 +303,7 @@
       "10:30 AM",
       "11:15 AM"
     ],
-    "imagePath": "../assets/fillerImage.png",
+    "imagePath": "/Users/alexshpakov/_projects/_personal/p60/src/assets/theMeadows.jpg",
     "morningPricePerNineCart": "$30",
     "afternoonPricePerNineCart": "$26",
     "twilightPricePerNineCart": "$22",
@@ -327,7 +327,7 @@
       "4:30 PM",
       "4:45 PM"
     ],
-    "imagePath": "../assets/fillerImage.png",
+    "imagePath": "/Users/alexshpakov/_projects/_personal/p60/src/assets/hawksLanding.gif",
     "morningPricePerNineCart": "$32",
     "afternoonPricePerNineCart": "$28",
     "twilightPricePerNineCart": "$24",
@@ -348,7 +348,7 @@
       "10:30 AM",
       "1:45 PM"
     ],
-    "imagePath": "../assets/fillerImage.png",
+    "imagePath": "/Users/alexshpakov/_projects/_personal/p60/src/assets/foxboro.webp",
     "morningPricePerNineCart": "$28",
     "afternoonPricePerNineCart": "$25",
     "twilightPricePerNineCart": "$21",

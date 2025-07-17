@@ -1,12 +1,32 @@
 import {Button, Card, Image} from "react-bootstrap";
 
 const Course = (props) => {
-    return <Card style={{margin: "auto", marginTop: "1rem", maxWidth: "40rem"}}>
+    return <Card style={{
+        // margin: "auto",
+        // marginTop: "1rem",
+        maxWidth: "40rem",
+        height: "auto", // 🔑 Fixed height for all cards
+        // display: "flex",
+        // flexDirection: "column",
+        // justifyContent: "space-between"
+    }}>
         {
             Object.keys(props).length > 0 ? <>
-                <h2>{props.results.courseName}</h2>
-                <strong>{props.results.numHoles}</strong>
-                <Image>{props.results.imagePath}</Image>
+                <h2
+                    style={{
+                        fontSize: "0.75rem",
+                        textAlign: "center"
+                    }}
+                >
+                    {props.courseName}
+                </h2>                <strong>{props.numHoles}</strong>
+                <br></br>
+                <Image
+                    src={props.imagePath}
+                    alt={props.courseName}
+                    style={{ objectFit: "cover", width: "100%", height: "200px" }}
+                    fluid
+                />                <br></br>
                 <Button>View Course Details</Button>
             </> : <p>Loading...</p>
         }

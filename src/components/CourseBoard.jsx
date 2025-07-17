@@ -19,13 +19,27 @@ export default function CourseBoard() {
                 }
                 return res.json();
             })
-            .then(data => console.log(data))
+            .then(data => {
+                // console.log(data.results)
+                setCourses(Object.values(data.results))
+            })
             .catch(err => console.error('Fetch error:', err));
 
     }, []);
 
-    const filteredCourses = courses.filter(course => course.results.courseName.toLowerCase().includes(courseNameFilter)
-        && course.results.numHoles.includes(courseHolesFilter));
+    console.log(courses);
+
+    // const filteredCourses = courses.filter(course => course.courseName.toLowerCase().includes(courseNameFilter)
+    //     && course.numHoles.includes(courseHolesFilter));
+
+    const filteredCourses = courses.filter(course => {
+        const matchesName = course.courseName.toLowerCase().includes(courseNameFilter.toLowerCase());
+        const matchesHoles = courseHolesFilter === "other"
+            ? (course.numHoles !== "9" && course.numHoles !== "18")
+            : course.numHoles.includes(courseHolesFilter);
+        return matchesName && matchesHoles;
+    });
+
 
     const resetFilters = () => {
         setCourseNameFilter("");
@@ -46,25 +60,49 @@ export default function CourseBoard() {
                         setCourseNameFilter(e.target.value);
                     }}
                 />
-                <Form.Label htmlFor="searchNumHoles">Number of Holes</Form.Label>
-                <Form.Control
-                    id="searchNumHoles"
-                    value={courseHolesFilter}
-                    onChange={(e) => {
-                        setCourseHolesFilter(e.target.value);
-                    }}
-                />
+                {/*<Form.Label htmlFor="searchNumHoles">Number of Holes</Form.Label>*/}
+                {/*<Form.Control*/}
+                {/*    id="searchNumHoles"*/}
+                {/*    value={courseHolesFilter}*/}
+                {/*    onChange={(e) => {*/}
+                {/*        setCourseHolesFilter(e.target.value);*/}
+                {/*    }}*/}
+                {/*/>*/}
+                <Form.Label>Number of Holes</Form.Label>
+                <div style={{marginBottom: "1rem", textAlign: "center"}}>
+                    <Button
+                        variant={courseHolesFilter === "9" ? "primary" : "outline-primary"}
+                        onClick={() => setCourseHolesFilter("9")}
+                        style={{ margin: "0.25rem" }}
+                    >
+                        9
+                    </Button>
+                    <Button
+                        variant={courseHolesFilter === "18" ? "primary" : "outline-primary"}
+                        onClick={() => setCourseHolesFilter("18")}
+                        style={{ margin: "0.25rem" }}
+                    >
+                        18
+                    </Button>
+                    <Button
+                        variant={courseHolesFilter === "other" ? "primary" : "outline-primary"}
+                        onClick={() => setCourseHolesFilter("other")}
+                        style={{ margin: "0.25rem" }}
+                    >
+                        Other
+                    </Button>
+                </div>
                 <br/>
                 <Button variant="outline-dark" onClick={resetFilters}>
                     Reset Search
                 </Button>
             </Form>
             <Container fluid>
-                <Row>
+                <Row className="gx-4 gy-4">
                     <p>There are {filteredCourses.length} courses matching your search.</p>
                     {
-                        courses.length > 0 ? courses.map(course => (
-                            <Col xs={12} sm={12} md={6} lg={4} xl={3} key={course.name}>
+                        courses.length > 0 ? filteredCourses.map(course => (
+                            <Col xs={12} sm={12} md={6} lg={4} xl={3} key={course.courseName}>
                                 <Course {...course} />
                             </Col>
                         )) : <p>Course(s) loading...</p>

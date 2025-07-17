@@ -1,25 +1,35 @@
-nav
-{
-    position: fixed; /* make it stick to the top */
-    top: 0; /* align to top of viewport */
-    left: 0; /* align to left edge */
-    width: 100%; /* make it full width */
-    background-color: #6E9A4D;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+nav {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #6E9A4D; /* Dark green for golf feel */
     color: white;
-    padding: 10px;
-    z-index: 1000; /* keep it above other elements */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* subtle shadow for depth */
 }
 
-nav ul
-{
+nav h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 1.5rem;
     margin: 0;
     padding: 0;
 }
 
-nav li
-{
+nav li {
     cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+nav li:hover {
+    color: #90ee90; /* light green hover effect */
 }
