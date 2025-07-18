@@ -48,9 +48,7 @@ export default function CourseBoard() {
 
     return (
         <div>
-            <h1>Golf Today</h1>
             {/*<p>Search for students below!</p>*/}
-            <hr/>
             <Form>
                 <Form.Label htmlFor="searchName">Course Name</Form.Label>
                 <Form.Control
@@ -71,31 +69,30 @@ export default function CourseBoard() {
                 <Form.Label>Number of Holes</Form.Label>
                 <div style={{marginBottom: "1rem", textAlign: "center"}}>
                     <Button
-                        variant={courseHolesFilter === "9" ? "primary" : "outline-primary"}
+                        variant={courseHolesFilter === "9" ? "success" : "outline-success"}
                         onClick={() => setCourseHolesFilter("9")}
                         style={{ margin: "0.25rem" }}
                     >
                         9
                     </Button>
                     <Button
-                        variant={courseHolesFilter === "18" ? "primary" : "outline-primary"}
+                        variant={courseHolesFilter === "18" ? "success" : "outline-success"}
                         onClick={() => setCourseHolesFilter("18")}
                         style={{ margin: "0.25rem" }}
                     >
                         18
                     </Button>
                     <Button
-                        variant={courseHolesFilter === "other" ? "primary" : "outline-primary"}
+                        variant={courseHolesFilter === "other" ? "success" : "outline-success"}
                         onClick={() => setCourseHolesFilter("other")}
                         style={{ margin: "0.25rem" }}
                     >
                         Other
                     </Button>
+                    <Button variant="outline-danger" onClick={resetFilters}>
+                        Reset Search
+                    </Button>
                 </div>
-                <br/>
-                <Button variant="outline-dark" onClick={resetFilters}>
-                    Reset Search
-                </Button>
             </Form>
             <Container fluid>
                 <Row className="gx-4 gy-4">

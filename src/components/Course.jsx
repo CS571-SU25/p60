@@ -5,7 +5,7 @@ const Course = (props) => {
         // margin: "auto",
         // marginTop: "1rem",
         maxWidth: "40rem",
-        height: "auto", // 🔑 Fixed height for all cards
+        height: "auto",
         // display: "flex",
         // flexDirection: "column",
         // justifyContent: "space-between"
@@ -19,7 +19,8 @@ const Course = (props) => {
                     }}
                 >
                     {props.courseName}
-                </h2>                <strong>{props.numHoles}</strong>
+                </h2>
+                <strong>{props.numHoles}</strong>
                 <br></br>
                 <Image
                     src={props.imagePath}
@@ -27,7 +28,7 @@ const Course = (props) => {
                     style={{ objectFit: "cover", width: "100%", height: "200px" }}
                     fluid
                 />                <br></br>
-                <Button>View Course Details</Button>
+                <Button variant={"success"} onClick={() => alert("Feature Coming Soon!")}>View Course Details</Button>
             </> : <p>Loading...</p>
         }
     </Card>

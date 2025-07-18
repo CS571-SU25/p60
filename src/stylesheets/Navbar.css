@@ -1,35 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');*/
 
-nav {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #6E9A4D; /* Dark green for golf feel */
-    color: white;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* subtle shadow for depth */
-}
+/*nav {*/
+/*    font-family: 'Montserrat', sans-serif;*/
+/*    background-color: #006400;*/
+/*    color: white;*/
+/*    padding: 1rem;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    width: 100%; !* force full width *!*/
+/*    box-sizing: border-box; !* avoid extra width from padding *!*/
+/*}*/
 
-nav h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-}
+/*nav h1 {*/
+/*    font-size: 2rem;*/
+/*    font-weight: 700;*/
+/*    letter-spacing: 1px;*/
+/*}*/
 
-nav li {
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
+/*nav ul {*/
+/*    list-style: none;*/
+/*    display: flex;*/
+/*    gap: 1.5rem;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
 
-nav li:hover {
-    color: #90ee90; /* light green hover effect */
-}
+/*nav li {*/
+/*    cursor: pointer;*/
+/*    transition: color 0.3s ease;*/
+/*}*/
+
+/*nav li:hover {*/
+/*    color: #90ee90; !* light green hover effect *!*/
+/*}*/
