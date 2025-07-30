@@ -10,7 +10,7 @@ export default function CourseBoard() {
     useEffect(() => {
         fetch('https://cs571api.cs.wisc.edu/rest/su25/bucket/golfcourses', {
             headers: {
-                "X-CS571-ID": CS571.getBadgerId()
+                "X-CS571-ID": "bid_e7970e6faf9f52d2f519925e1caa7c607ca8735aeed3755ad8c6a24d362c97e3"
             }
         })
             .then(res => {
