@@ -1,6 +1,6 @@
 import React, {memo} from "react"
 
-function BadgerChatHome()
+function GolfTodayHome()
 {
     return <>
         <h1>The GolfToday Mission</h1>
@@ -21,4 +21,4 @@ function BadgerChatHome()
     </>
 }
 
-export default memo(BadgerChatHome);
+export default memo(GolfTodayHome);
