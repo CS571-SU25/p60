@@ -11,9 +11,18 @@ function BadgerLayout()
 
     return (
         <div>
-            <Navbar bg="dark" variant="dark">
+            <Navbar
+                expand="lg"
+                style={{
+                    backgroundColor: "#228B22", // green color
+                }}
+            >
                 <Container>
-                    <Navbar.Brand as={Link} to="/">
+                    <Navbar.Brand
+                        as={Link}
+                        to="/"
+                        style={{color: "white"}} // ensure text is white
+                    >
                         <img
                             alt="BadgerChat Logo"
                             src={crest}
@@ -24,19 +33,28 @@ function BadgerLayout()
                         GolfToday
                     </Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link as={Link} to="/">Home</Nav.Link>
-                        <Nav.Link as={Link} to="/courses">Courses</Nav.Link>
-                        {/*<Nav.Link as={Link} to="/course-map">Map</Nav.Link>*/}
-                        <Nav.Link as={Link} to="/favorites">Favorites</Nav.Link>
-                        <Nav.Link as={Link} to="/profile">Profile & Settings</Nav.Link>
-                        <Nav.Link as={Link} to="/stats">Stats</Nav.Link>
-                        <Button onClick={() =>
-                        {
-                            localStorage.removeItem("loggedInUser");
-                            window.location.reload();
-                        }} variant={"danger"}>
+                        <Nav.Link as={Link} to="/" style={{color: "white"}}>Home</Nav.Link>
+                        <Nav.Link as={Link} to="/courses" style={{color: "white"}}>Courses</Nav.Link>
+                        <Nav.Link as={Link} to="/favorites" style={{color: "white"}}>Favorites</Nav.Link>
+                        <Nav.Link as={Link} to="/profile" style={{color: "white"}}>Profile & Settings</Nav.Link>
+                        <Nav.Link as={Link} to="/stats" style={{color: "white"}}>Stats</Nav.Link>
+                        <button
+                            className="nav-link logout-link"
+                            style={{
+                                background: "transparent",
+                                border: "none",
+                                color: "white",
+                                padding: 0,
+                                cursor: "pointer"
+                            }}
+                            onClick={() =>
+                            {
+                                localStorage.removeItem("loggedInUser");
+                                window.location.reload();
+                            }}
+                        >
                             Logout
-                        </Button>
+                        </button>
                     </Nav>
                 </Container>
             </Navbar>

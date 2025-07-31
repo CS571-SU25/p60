@@ -58,14 +58,6 @@ export default function CourseBoard() {
                         setCourseNameFilter(e.target.value);
                     }}
                 />
-                {/*<Form.Label htmlFor="searchNumHoles">Number of Holes</Form.Label>*/}
-                {/*<Form.Control*/}
-                {/*    id="searchNumHoles"*/}
-                {/*    value={courseHolesFilter}*/}
-                {/*    onChange={(e) => {*/}
-                {/*        setCourseHolesFilter(e.target.value);*/}
-                {/*    }}*/}
-                {/*/>*/}
                 <Form.Label>Number of Holes</Form.Label>
                 <div style={{marginBottom: "1rem", textAlign: "center"}}>
                     <Button
