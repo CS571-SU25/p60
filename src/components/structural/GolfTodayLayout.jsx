@@ -5,7 +5,7 @@ import {Link, Outlet} from "react-router";
 import crest from '../../assets/uw-crest.svg'
 import LoginStatusContext from "../contexts/LoginStatusContext.js";
 
-function BadgerLayout()
+function GolfTodayLayout()
 {
     const [loginStatus, setLoginStatus] = useState(null); // no login anymore
 
@@ -68,4 +68,4 @@ function BadgerLayout()
     );
 }
 
-export default BadgerLayout;
+export default GolfTodayLayout;

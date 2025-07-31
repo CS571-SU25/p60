@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {BrowserRouter, Route, Routes} from 'react-router';
 
-import BadgerLayout from './BadgerLayout';
+import GolfTodayLayout from './GolfTodayLayout.jsx';
 import GolfTodayHome from '../content/GolfTodayHome.jsx';
 import CourseBoard from '../content/CourseBoard.jsx';
 import CourseDetails from '../content/CourseDetails.jsx';
@@ -12,7 +12,7 @@ import Profile from "../content/Profile.jsx";
 import Stats from "../content/Stats.jsx";
 import ContactUs from "../content/ContactUs.jsx";
 
-function BadgerApp()
+function GolfTodayApp()
 {
     const [loggedInUser, setLoggedInUser] = useState(localStorage.getItem("loggedInUser"));
 
@@ -24,7 +24,7 @@ function BadgerApp()
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<BadgerLayout/>}>
+                <Route path="/" element={<GolfTodayLayout/>}>
                     <Route index element={<GolfTodayHome/>}/>
                     <Route path="courses" element={<CourseBoard/>}/>
                     <Route path="course-details" element={<CourseDetails/>}/>
@@ -40,4 +40,4 @@ function BadgerApp()
     );
 }
 
-export default BadgerApp;
+export default GolfTodayApp;
