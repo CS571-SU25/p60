@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
+import {Form, Button, Row, Col} from "react-bootstrap";
 
 export default function Profile()
 {
@@ -12,13 +13,13 @@ export default function Profile()
     const handleLogout = () =>
     {
         localStorage.removeItem("loggedInUser");
-        navigate(0); // Reload to return to AuthPage
+        navigate(0); // reload
     };
 
     const handleClearFavorites = () =>
     {
-        localStorage.removeItem("favorites");
-        alert("Favorites cleared!");
+        const key = `favorites_${username}`;
+        localStorage.removeItem(key);
     };
 
     const handleChangePassword = () =>
@@ -26,81 +27,67 @@ export default function Profile()
         const users = JSON.parse(localStorage.getItem("users") || "[]");
         const index = users.findIndex(u => u.username === username);
 
-        // Edge case: user record missing
-        if (index === -1)
-        {
-            alert("Unexpected error: user not found.");
-            return;
-        }
+        if (index === -1) return alert("Unexpected error: user not found.");
+        if (!oldPassword || !newPassword) return alert("Please enter both old and new password.");
+        if (users[index].password !== oldPassword) return alert("Old password is incorrect.");
+        if (oldPassword === newPassword) return alert("New password cannot be the same as the old password.");
+        if (newPassword.length < 4) return alert("New password must be at least 4 characters.");
 
-        // Edge case: empty fields
-        if (!oldPassword || !newPassword)
-        {
-            alert("Please enter both your old and new password.");
-            return;
-        }
-
-        // Edge case: old password doesn't match
-        if (users[index].password !== oldPassword)
-        {
-            alert("Old password is incorrect.");
-            return;
-        }
-
-        // Edge case: new password same as old
-        if (oldPassword === newPassword)
-        {
-            alert("New password cannot be the same as the old password.");
-            return;
-        }
-
-        // Edge case: enforce a simple minimum length rule (optional)
-        if (newPassword.length < 4)
-        {
-            alert("New password must be at least 4 characters.");
-            return;
-        }
-
-        // Update password
         users[index].password = newPassword;
         localStorage.setItem("users", JSON.stringify(users));
         alert("Password changed successfully!");
-
-        // Reset inputs
         setOldPassword("");
         setNewPassword("");
     };
 
     return (
-        <div style={{padding: "2rem"}}>
+        <div style={{padding: "2rem", maxWidth: "700px"}}>
             <h1>Profile</h1>
             <p><strong>User:</strong> {username}</p>
 
-            <h2>Change Password</h2>
-            <div style={{marginBottom: "1rem"}}>
-                <input
-                    type="password"
-                    placeholder="Old password"
-                    value={oldPassword}
-                    onChange={(e) => setOldPassword(e.target.value)}
-                    style={{marginRight: "0.5rem"}}
-                />
-                <input
-                    type="password"
-                    placeholder="New password"
-                    value={newPassword}
-                    onChange={(e) => setNewPassword(e.target.value)}
-                    style={{marginRight: "0.5rem"}}
-                />
-                <button onClick={handleChangePassword}>Change</button>
-            </div>
+            <h2 className="mt-4">Change Password</h2>
+            <Form className="mt-3">
+                <Row className="align-items-end">
+                    <Col md={5}>
+                        <Form.Group controlId="oldPassword">
+                            <Form.Label>Old password</Form.Label>
+                            <Form.Control
+                                type="password"
+                                value={oldPassword}
+                                onChange={(e) => setOldPassword(e.target.value)}
+                            />
+                        </Form.Group>
+                    </Col>
+                    <Col md={5}>
+                        <Form.Group controlId="newPassword">
+                            <Form.Label>New password</Form.Label>
+                            <Form.Control
+                                type="password"
+                                value={newPassword}
+                                onChange={(e) => setNewPassword(e.target.value)}
+                            />
+                        </Form.Group>
+                    </Col>
+                    <Col md="auto">
+                        <Button variant="primary" onClick={handleChangePassword}>
+                            Change
+                        </Button>
+                    </Col>
+                </Row>
+            </Form>
 
-            <button onClick={handleClearFavorites} style={{marginRight: "1rem"}}>
-                Clear All Favorites
-            </button>
-            <button onClick={handleLogout}>
-                Logout
-            </button>
+            <div className="mt-4">
+                <Button
+                    variant="outline-danger"
+                    className="me-2"
+                    onClick={handleClearFavorites}
+                >
+                    Clear All Favorites
+                </Button>
+                <Button variant="secondary" onClick={handleLogout}>
+                    Logout
+                </Button>
+            </div>
         </div>
     );
 }
