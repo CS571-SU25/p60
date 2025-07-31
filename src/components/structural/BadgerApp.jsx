@@ -8,6 +8,9 @@ import CourseDetails from '../content/CourseDetails.jsx';
 import BadgerNoMatch from '../content/BadgerNoMatch';
 import AuthPage from '../content/AuthPage.jsx';
 import Favorites from "../content/Favorites.jsx";
+import Profile from "../content/Profile.jsx";
+import Stats from "../content/Stats.jsx";
+
 
 function BadgerApp()
 {
@@ -26,9 +29,9 @@ function BadgerApp()
                     <Route path="courses" element={<CourseBoard/>}/>
                     <Route path="course-details" element={<CourseDetails/>}/>
                     <Route path="*" element={<BadgerNoMatch/>}/>
-                    <Route path="favorites" element={<Favorites />} />
-
-
+                    <Route path="favorites" element={<Favorites/>}/>
+                    <Route path="profile" element={<Profile/>}/>
+                    <Route path="stats" element={<Stats/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>
