@@ -21,7 +21,7 @@ function BadgerLayout()
                     <Navbar.Brand
                         as={Link}
                         to="/"
-                        style={{color: "white"}} // ensure text is white
+                        style={{color: "black"}} // ensure text is white
                     >
                         <img
                             alt="BadgerChat Logo"
@@ -33,17 +33,17 @@ function BadgerLayout()
                         GolfToday
                     </Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link as={Link} to="/" style={{color: "white"}}>Home</Nav.Link>
-                        <Nav.Link as={Link} to="/courses" style={{color: "white"}}>Courses</Nav.Link>
-                        <Nav.Link as={Link} to="/favorites" style={{color: "white"}}>Favorites</Nav.Link>
-                        <Nav.Link as={Link} to="/profile" style={{color: "white"}}>Profile & Settings</Nav.Link>
-                        <Nav.Link as={Link} to="/stats" style={{color: "white"}}>Stats</Nav.Link>
+                        <Nav.Link as={Link} to="/" style={{color: "black"}}>Home</Nav.Link>
+                        <Nav.Link as={Link} to="/courses" style={{color: "black"}}>Courses</Nav.Link>
+                        <Nav.Link as={Link} to="/favorites" style={{color: "black"}}>Favorites</Nav.Link>
+                        <Nav.Link as={Link} to="/profile" style={{color: "black"}}>Profile & Settings</Nav.Link>
+                        <Nav.Link as={Link} to="/stats" style={{color: "black"}}>Stats</Nav.Link>
                         <button
                             className="nav-link logout-link"
                             style={{
                                 background: "transparent",
                                 border: "none",
-                                color: "white",
+                                color: "black",
                                 padding: 0,
                                 cursor: "pointer"
                             }}

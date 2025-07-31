@@ -51,7 +51,7 @@ export default function AuthPage({onLogin})
                         {mode === "login" ? "Welcome Back to GolfToday" : "Create Your Account"}
                     </Card.Title>
                     <Form>
-                        <Form.Group className="mb-3">
+                        <Form.Group className="mb-3" controlId="authUsername">
                             <Form.Label>Username</Form.Label>
                             <Form.Control
                                 type="text"
@@ -61,7 +61,7 @@ export default function AuthPage({onLogin})
                             />
                         </Form.Group>
 
-                        <Form.Group className="mb-3">
+                        <Form.Group className="mb-3" controlId="authPassword">
                             <Form.Label>Password</Form.Label>
                             <Form.Control
                                 type="password"
