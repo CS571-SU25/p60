@@ -57,15 +57,17 @@ export default function CourseBoard()
         <div>
             {/*<p>Search for students below!</p>*/}
             <Form>
-                <Form.Label htmlFor="searchName">Course Name</Form.Label>
-                <Form.Control
-                    id="searchName"
-                    value={courseNameFilter}
-                    onChange={(e) =>
-                    {
-                        setCourseNameFilter(e.target.value);
-                    }}
-                />
+                <div style={{textAlign: "center"}}>
+                    <Form.Label htmlFor="searchName">Course Name</Form.Label>
+                    <Form.Control
+                        id="searchName"
+                        value={courseNameFilter}
+                        onChange={(e) =>
+                        {
+                            setCourseNameFilter(e.target.value);
+                        }}
+                    />
+                </div>
                 <div style={{textAlign: "center"}}>
                     <Form.Label>Number of Holes</Form.Label>
                     <div style={{marginBottom: "1rem"}}>
@@ -99,7 +101,7 @@ export default function CourseBoard()
             </Form>
             <Container fluid>
                 <Row className="gx-4 gy-4">
-                    <p style={{ width: "100%", textAlign: "center" }}>
+                    <p style={{width: "100%", textAlign: "center"}}>
                         There are {filteredCourses.length} courses matching your search.
                     </p>
 
@@ -126,5 +128,5 @@ export default function CourseBoard()
             {/*    </Pagination>*/}
             {/*)}*/}
         </div>
-);
+    );
 }
