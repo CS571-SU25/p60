@@ -5,7 +5,7 @@ import BadgerLayout from './BadgerLayout';
 import GolfTodayHome from '../content/GolfTodayHome.jsx';
 import CourseBoard from '../content/CourseBoard.jsx';
 import CourseDetails from '../content/CourseDetails.jsx';
-import BadgerNoMatch from '../content/BadgerNoMatch';
+import NoMatch from '../content/NoMatch.jsx';
 import AuthPage from '../content/AuthPage.jsx';
 import Favorites from "../content/Favorites.jsx";
 import Profile from "../content/Profile.jsx";
@@ -28,7 +28,7 @@ function BadgerApp()
                     <Route index element={<GolfTodayHome/>}/>
                     <Route path="courses" element={<CourseBoard/>}/>
                     <Route path="course-details" element={<CourseDetails/>}/>
-                    <Route path="*" element={<BadgerNoMatch/>}/>
+                    <Route path="*" element={<NoMatch/>}/>
                     <Route path="favorites" element={<Favorites/>}/>
                     <Route path="profile" element={<Profile/>}/>
                     <Route path="stats" element={<Stats/>}/>

@@ -3,7 +3,7 @@ import {Button, ButtonToolbar, CloseButton, Container, Nav, Navbar, NavbarText} 
 import {Link, Outlet} from "react-router";
 
 import crest from '../../assets/uw-crest.svg'
-import BadgerLoginStatusContext from "../contexts/BadgerLoginStatusContext";
+import LoginStatusContext from "../contexts/LoginStatusContext.js";
 
 function BadgerLayout()
 {
@@ -59,9 +59,9 @@ function BadgerLayout()
                 </Container>
             </Navbar>
             <div style={{margin: "1rem"}}>
-                <BadgerLoginStatusContext.Provider value={[loginStatus, setLoginStatus]}>
+                <LoginStatusContext.Provider value={[loginStatus, setLoginStatus]}>
                     <Outlet/>
-                </BadgerLoginStatusContext.Provider>
+                </LoginStatusContext.Provider>
             </div>
         </div>
     );
