@@ -27,6 +27,7 @@ function BadgerLayout()
                         <Nav.Link as={Link} to="/">Home</Nav.Link>
                         <Nav.Link as={Link} to="/courses">Courses</Nav.Link>
                         {/*<Nav.Link as={Link} to="/course-map">Map</Nav.Link>*/}
+                        <Nav.Link as={Link} to="/favorites">Favorites</Nav.Link>
                         <button onClick={() =>
                         {
                             localStorage.removeItem("loggedInUser");

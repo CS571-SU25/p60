@@ -7,6 +7,7 @@ import CourseBoard from '../content/CourseBoard.jsx';
 import CourseDetails from '../content/CourseDetails.jsx';
 import BadgerNoMatch from '../content/BadgerNoMatch';
 import AuthPage from '../content/AuthPage.jsx';
+import Favorites from "../content/Favorites.jsx";
 
 function BadgerApp()
 {
@@ -25,7 +26,8 @@ function BadgerApp()
                     <Route path="courses" element={<CourseBoard/>}/>
                     <Route path="course-details" element={<CourseDetails/>}/>
                     <Route path="*" element={<BadgerNoMatch/>}/>
-                    {/*<Route path="course-map" element={<CourseMap />} />*/}
+                    <Route path="favorites" element={<Favorites />} />
+
 
                 </Route>
             </Routes>
