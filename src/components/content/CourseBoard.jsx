@@ -2,24 +2,29 @@ import {Button, Col, Container, Form, Pagination, Row} from "react-bootstrap";
 import {useState, useEffect} from "react";
 import Course from "./Course";
 
-export default function CourseBoard() {
+export default function CourseBoard()
+{
     const [courses, setCourses] = useState([]);
     const [courseNameFilter, setCourseNameFilter] = useState("");
     const [courseHolesFilter, setCourseHolesFilter] = useState("");
 
-    useEffect(() => {
+    useEffect(() =>
+    {
         fetch('https://cs571api.cs.wisc.edu/rest/su25/bucket/golfcourses', {
             headers: {
                 "X-CS571-ID": "bid_e7970e6faf9f52d2f519925e1caa7c607ca8735aeed3755ad8c6a24d362c97e3"
             }
         })
-            .then(res => {
-                if (!res.ok) {
+            .then(res =>
+            {
+                if (!res.ok)
+                {
                     throw new Error(`HTTP error! status: ${res.status}`);
                 }
                 return res.json();
             })
-            .then(data => {
+            .then(data =>
+            {
                 // console.log(data.results)
                 setCourses(Object.values(data.results))
             })
@@ -32,7 +37,8 @@ export default function CourseBoard() {
     // const filteredCourses = courses.filter(course => course.courseName.toLowerCase().includes(courseNameFilter)
     //     && course.numHoles.includes(courseHolesFilter));
 
-    const filteredCourses = courses.filter(course => {
+    const filteredCourses = courses.filter(course =>
+    {
         const matchesName = course.courseName.toLowerCase().includes(courseNameFilter.toLowerCase());
         const matchesHoles = courseHolesFilter === "other"
             ? (course.numHoles !== "9" && course.numHoles !== "18")
@@ -41,7 +47,8 @@ export default function CourseBoard() {
     });
 
 
-    const resetFilters = () => {
+    const resetFilters = () =>
+    {
         setCourseNameFilter("");
         setCourseHolesFilter("")
     }
@@ -54,41 +61,48 @@ export default function CourseBoard() {
                 <Form.Control
                     id="searchName"
                     value={courseNameFilter}
-                    onChange={(e) => {
+                    onChange={(e) =>
+                    {
                         setCourseNameFilter(e.target.value);
                     }}
                 />
-                <Form.Label>Number of Holes</Form.Label>
-                <div style={{marginBottom: "1rem", textAlign: "center"}}>
-                    <Button
-                        variant={courseHolesFilter === "9" ? "success" : "outline-success"}
-                        onClick={() => setCourseHolesFilter("9")}
-                        style={{ margin: "0.25rem" }}
-                    >
-                        9
-                    </Button>
-                    <Button
-                        variant={courseHolesFilter === "18" ? "success" : "outline-success"}
-                        onClick={() => setCourseHolesFilter("18")}
-                        style={{ margin: "0.25rem" }}
-                    >
-                        18
-                    </Button>
-                    <Button
-                        variant={courseHolesFilter === "other" ? "success" : "outline-success"}
-                        onClick={() => setCourseHolesFilter("other")}
-                        style={{ margin: "0.25rem" }}
-                    >
-                        Other
-                    </Button>
-                    <Button variant="outline-danger" onClick={resetFilters}>
-                        Reset Search
-                    </Button>
+                <div style={{textAlign: "center"}}>
+                    <Form.Label>Number of Holes</Form.Label>
+                    <div style={{marginBottom: "1rem"}}>
+
+                        <Button
+                            variant={courseHolesFilter === "9" ? "success" : "outline-success"}
+                            onClick={() => setCourseHolesFilter("9")}
+                            style={{margin: "0.25rem"}}
+                        >
+                            9
+                        </Button>
+                        <Button
+                            variant={courseHolesFilter === "18" ? "success" : "outline-success"}
+                            onClick={() => setCourseHolesFilter("18")}
+                            style={{margin: "0.25rem"}}
+                        >
+                            18
+                        </Button>
+                        <Button
+                            variant={courseHolesFilter === "other" ? "success" : "outline-success"}
+                            onClick={() => setCourseHolesFilter("other")}
+                            style={{margin: "0.25rem"}}
+                        >
+                            Other
+                        </Button>
+                        <Button variant="outline-danger" onClick={resetFilters}>
+                            Reset Search
+                        </Button>
+                    </div>
                 </div>
             </Form>
             <Container fluid>
                 <Row className="gx-4 gy-4">
-                    <p>There are {filteredCourses.length} courses matching your search.</p>
+                    <p style={{ width: "100%", textAlign: "center" }}>
+                        There are {filteredCourses.length} courses matching your search.
+                    </p>
+
                     {
                         courses.length > 0 ? filteredCourses.map(course => (
                             <Col xs={12} sm={12} md={6} lg={4} xl={3} key={course.courseName}>
@@ -112,5 +126,5 @@ export default function CourseBoard() {
             {/*    </Pagination>*/}
             {/*)}*/}
         </div>
-    );
+);
 }

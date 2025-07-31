@@ -51,7 +51,7 @@ const Course = (props) =>
                     <h2 style={{fontSize: "0.75rem", textAlign: "center"}}>
                         {props.courseName}
                     </h2>
-                    <strong>{props.numHoles}</strong>
+                    <strong style={{textAlign: "center"}}>{props.numHoles}</strong>
                     <br/>
                     <Image
                         src={props.imagePath}
