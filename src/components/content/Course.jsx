@@ -60,15 +60,19 @@ const Course = (props) =>
                         fluid
                     />
                     <br/>
-                    <Button variant="success" onClick={handleViewDetails}>
-                        View Course Details
-                    </Button>{" "}
+                    {/* Show View Details only if NOT rendered from Favorites */}
+                    {!props.onFavoriteChange && (
+                        <Button variant="success" onClick={handleViewDetails}>
+                            View Course Details
+                        </Button>
+                    )}{" "}
                     <Button
                         variant={isFavorite ? "danger" : "outline-primary"}
                         onClick={toggleFavorite}
                     >
                         {isFavorite ? "Remove from Favorites" : "Save to Favorites"}
                     </Button>
+
                 </>
             ) : (
                 <p>Loading...</p>
