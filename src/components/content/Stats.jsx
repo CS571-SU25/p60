@@ -1,14 +1,18 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 
-export default function Stats() {
+export default function Stats()
+{
     const [courses, setCourses] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [topFavorites, setTopFavorites] = useState([]);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
+    useEffect(() =>
+    {
+        const fetchData = async () =>
+        {
+            try
+            {
                 const resp = await fetch(
                     "https://cs571api.cs.wisc.edu/rest/su25/bucket/golfcourses",
                     {
@@ -26,22 +30,32 @@ export default function Stats() {
                 const courseList = Object.values(data.results);
                 setCourses(courseList);
 
-                // Compute top favorites based on localStorage
-                const favs = JSON.parse(localStorage.getItem("favorites") || "[]");
+                // Aggregate favorites from ALL users
                 const freq = {};
-                favs.forEach(f => {
-                    freq[f.courseName] = (freq[f.courseName] || 0) + 1;
-                });
+                for (let i = 0; i < localStorage.length; i++)
+                {
+                    const key = localStorage.key(i);
+                    if (key && key.startsWith("favorites_"))
+                    {
+                        const favs = JSON.parse(localStorage.getItem(key) || "[]");
+                        favs.forEach(f =>
+                        {
+                            freq[f.courseName] = (freq[f.courseName] || 0) + 1;
+                        });
+                    }
+                }
 
                 const sorted = Object.entries(freq)
-                    .sort((a, b) => b[1] - a[1]) // sort descending by count
+                    .sort((a, b) => b[1] - a[1])
                     .slice(0, 3);
 
                 setTopFavorites(sorted);
-            } catch (err) {
+            } catch (err)
+            {
                 console.error("Failed to fetch courses:", err);
                 setError(err.message);
-            } finally {
+            } finally
+            {
                 setLoading(false);
             }
         };
@@ -58,14 +72,14 @@ export default function Stats() {
     const other = totalCourses - nineHole - eighteenHole;
 
     return (
-        <div style={{ padding: "2rem" }}>
+        <div style={{padding: "2rem"}}>
             <h1>Golf Course Statistics</h1>
             <p>Total Courses: <strong>{totalCourses}</strong></p>
             <p>9-Hole Courses: <strong>{nineHole}</strong></p>
             <p>18-Hole Courses: <strong>{eighteenHole}</strong></p>
             <p>Other: <strong>{other}</strong></p>
 
-            <h2 style={{ marginTop: "2rem" }}>Top 3 Most Favorited Courses</h2>
+            <h2 style={{marginTop: "2rem"}}>Top 3 Most Favorited Courses (All Users)</h2>
             {topFavorites.length === 0 ? (
                 <p>No favorites have been saved yet.</p>
             ) : (

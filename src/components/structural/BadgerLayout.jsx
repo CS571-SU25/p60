@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Container, Nav, Navbar} from "react-bootstrap";
+import {Button, ButtonToolbar, CloseButton, Container, Nav, Navbar, NavbarText} from "react-bootstrap";
 import {Link, Outlet} from "react-router";
 
 import crest from '../../assets/uw-crest.svg'
@@ -30,13 +30,13 @@ function BadgerLayout()
                         <Nav.Link as={Link} to="/favorites">Favorites</Nav.Link>
                         <Nav.Link as={Link} to="/profile">Profile & Settings</Nav.Link>
                         <Nav.Link as={Link} to="/stats">Stats</Nav.Link>
-                        <button onClick={() =>
+                        <Button onClick={() =>
                         {
                             localStorage.removeItem("loggedInUser");
                             window.location.reload();
-                        }}>
+                        }} variant={"danger"}>
                             Logout
-                        </button>
+                        </Button>
                     </Nav>
                 </Container>
             </Navbar>

@@ -7,11 +7,14 @@ const Course = (props) =>
     const navigate = useNavigate();
     const [isFavorite, setIsFavorite] = useState(false);
 
+    const loggedInUser = localStorage.getItem("loggedInUser");
+    const favoritesKey = `favorites_${loggedInUser}`;
+
     useEffect(() =>
     {
-        const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+        const favorites = JSON.parse(localStorage.getItem(favoritesKey) || "[]");
         setIsFavorite(favorites.some(fav => fav.courseName === props.courseName));
-    }, [props.courseName]);
+    }, [props.courseName, favoritesKey]);
 
     const handleViewDetails = () =>
     {
@@ -20,15 +23,14 @@ const Course = (props) =>
 
     const toggleFavorite = () =>
     {
-        let favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+        let favorites = JSON.parse(localStorage.getItem(favoritesKey) || "[]");
 
         if (isFavorite)
         {
             favorites = favorites.filter(fav => fav.courseName !== props.courseName);
-            localStorage.setItem("favorites", JSON.stringify(favorites));
+            localStorage.setItem(favoritesKey, JSON.stringify(favorites));
             setIsFavorite(false);
 
-            // Notify parent if available
             if (props.onFavoriteChange)
             {
                 props.onFavoriteChange(props.courseName);
@@ -37,11 +39,10 @@ const Course = (props) =>
         else
         {
             favorites.push(props);
-            localStorage.setItem("favorites", JSON.stringify(favorites));
+            localStorage.setItem(favoritesKey, JSON.stringify(favorites));
             setIsFavorite(true);
         }
     };
-
 
     return (
         <Card style={{maxWidth: "40rem", height: "auto"}}>

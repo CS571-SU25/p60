@@ -4,18 +4,19 @@ import Course from "./Course";
 export default function Favorites()
 {
     const [favorites, setFavorites] = useState([]);
+    const loggedInUser = localStorage.getItem("loggedInUser");
+    const favoritesKey = `favorites_${loggedInUser}`;
 
     useEffect(() =>
     {
-        const stored = JSON.parse(localStorage.getItem("favorites") || "[]");
+        const stored = JSON.parse(localStorage.getItem(favoritesKey) || "[]");
         setFavorites(stored);
-    }, []);
+    }, [favoritesKey]);
 
-    // Function to handle removal of a favorite and update the list immediately
     const handleFavoriteChange = (courseName) =>
     {
         const updated = favorites.filter(fav => fav.courseName !== courseName);
-        localStorage.setItem("favorites", JSON.stringify(updated));
+        localStorage.setItem(favoritesKey, JSON.stringify(updated));
         setFavorites(updated);
     };
 
@@ -32,7 +33,6 @@ export default function Favorites()
                     <Course
                         key={course.courseName}
                         {...course}
-                        // React to a removal triggered in Course.jsx
                         onFavoriteChange={handleFavoriteChange}
                     />
                 ))}
