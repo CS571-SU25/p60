@@ -38,6 +38,7 @@ function BadgerLayout()
                         <Nav.Link as={Link} to="/favorites" style={{color: "black"}}>Favorites</Nav.Link>
                         <Nav.Link as={Link} to="/profile" style={{color: "black"}}>Profile & Settings</Nav.Link>
                         <Nav.Link as={Link} to="/stats" style={{color: "black"}}>Stats</Nav.Link>
+                        <Nav.Link as={Link} to="/contact" style={{color: "black"}}>Contact Us</Nav.Link>
                         <button
                             className="nav-link logout-link"
                             style={{

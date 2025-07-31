@@ -10,7 +10,7 @@ import AuthPage from '../content/AuthPage.jsx';
 import Favorites from "../content/Favorites.jsx";
 import Profile from "../content/Profile.jsx";
 import Stats from "../content/Stats.jsx";
-
+import ContactUs from "../content/ContactUs.jsx";
 
 function BadgerApp()
 {
@@ -32,6 +32,8 @@ function BadgerApp()
                     <Route path="favorites" element={<Favorites/>}/>
                     <Route path="profile" element={<Profile/>}/>
                     <Route path="stats" element={<Stats/>}/>
+                    <Route path="contact" element={<ContactUs />} />
+
                 </Route>
             </Routes>
         </BrowserRouter>
